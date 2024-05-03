@@ -21,7 +21,7 @@ heuristica= DistanzaManhattan()
 AGV01= PathfinderSolver(mappa, heuristica, start01, target01)
 
 lista01 = AGV01.solve()
-print("Path AGV01: ({})".format(len(lista)))
+print("Path AGV01: ({})".format(len(lista01)))
 for i in lista01: 
     print (i)
 print ()
