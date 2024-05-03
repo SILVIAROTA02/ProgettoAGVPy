@@ -15,22 +15,22 @@ mappa= Mappa(10, 10, [
                       Obstacle(ConstantVelocity(Point(0,0), Point(0,2))),
                       Obstacle(ConstantVelocity(Point(1,0), Point(-1,1)))
 ], pericolosityDict)
-start= PointReachable (3,3,0)
-target= PointReachable (6,6,0)
+start01= PointReachable (3,3,0)
+target01= PointReachable (6,6,0)
 heuristica= DistanzaManhattan()
-solver= PathfinderSolver(mappa, heuristica, start, target)
+AGV01= PathfinderSolver(mappa, heuristica, start01, target01)
 
-lista = solver.solve()
-print("path: ({})".format(len(lista)))
-for i in lista: 
+lista = AGV01.solve()
+print("Path AGV01: ({})".format(len(lista)))
+for i in lista01: 
     print (i)
 print ()
-o = Obstacle(MotionPath(lista))
+o = Obstacle(MotionPath(lista01))
 mappa.obstacle.append(o)
-start1= PointReachable (4,2,0)
-target1= PointReachable (4,5,0)
-solver1= PathfinderSolver(mappa, heuristica, start1, target1)
-lista1= solver1.solve()
-print("path1: ({})".format(len(lista1)))
-for i in lista1: 
+start02= PointReachable (4,2,0)
+target02= PointReachable (4,5,0)
+AGV02= PathfinderSolver(mappa, heuristica, start02, target02)
+lista1= AGV02.solve()
+print("Path AGV02: ({})".format(len(lista02)))
+for i in lista02: 
     print (i)
