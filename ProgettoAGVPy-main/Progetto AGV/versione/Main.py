@@ -20,7 +20,7 @@ target01= PointReachable (6,6,0)
 heuristica= DistanzaManhattan()
 AGV01= PathfinderSolver(mappa, heuristica, start01, target01)
 
-lista = AGV01.solve()
+lista01 = AGV01.solve()
 print("Path AGV01: ({})".format(len(lista)))
 for i in lista01: 
     print (i)
@@ -30,7 +30,7 @@ mappa.obstacle.append(o)
 start02= PointReachable (4,2,0)
 target02= PointReachable (4,5,0)
 AGV02= PathfinderSolver(mappa, heuristica, start02, target02)
-lista1= AGV02.solve()
+lista02= AGV02.solve()
 print("Path AGV02: ({})".format(len(lista02)))
 for i in lista02: 
     print (i)
